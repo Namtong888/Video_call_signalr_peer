@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Video Meeting nam</title>
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css">
+
+</head>
+<body>
+    <p id="notification" hidden></p>
+    <div class="entry-modal" id="entry-modal">
+        <p>Tạo hoặc tham gia cuộc hộp</p>
+        <input id="room-input" class="room-input" placeholder="Enter Room ID">
+        <div>
+            <button onclick="joinRoom()">Tham gia phòng</button>
+        </div>
+    </div>
+    <div class="meet-area">
+        <!-- Remote Video Element-->
+        <video id="remote-video"></video>
+
+        <!-- Local Video Element-->
+        <video id="local-video" style="width: 300px; height: 150px "></video>
+        <div class="meet-controls-bar">
+            <button onclick="startScreenShare()">Trình bày</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
